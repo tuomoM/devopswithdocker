@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  eka:
+     image: devopsdockeruh/first_volume_exercise:latest  
+     volumes: 
+        - ./log.txt:/usr/app/logs.txt
+ 
+## note that log.txt file must exist for this to work

@@ -1,0 +1,18 @@
+version: "3"
+services:
+  train:
+    build: ./training/
+    volumes:
+      - ./src/model:/src/model/
+      - ./src/imgs:/src/imgs
+  front:
+    build : ./front/
+    ports:
+      - 3000:3000
+  back:
+    build: ./backend/
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src/model:/src/model
+

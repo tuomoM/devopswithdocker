@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  front:
+    build: ./front/
+    ports:
+      - 5000:5000
+  redis:
+    image: redis
+  back:
+    build: ./back/
+    environment: 
+      - REDIS=redis
+    ports:
+      - 8000:8000
+  
+   

@@ -1,0 +1,6 @@
+version: '3'
+services:
+   portti:
+    image: devopsdockeruh/ports_exercise:latest
+    ports: 
+      - 80:8000
